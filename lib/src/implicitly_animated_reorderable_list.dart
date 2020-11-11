@@ -317,6 +317,10 @@ class ImplicitlyAnimatedReorderableListState<E>
     _adjustItemTranslations();
   }
 
+  ReorderableState getContextByKey(String key){
+    return _items[ValueKey(key)];
+  }
+
   /// Adjust translations for all items that are not being dragged.
   ///
   /// All non-drag items can be in one of two states:
